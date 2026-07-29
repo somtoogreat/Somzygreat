@@ -196,6 +196,41 @@ nav a{
 
 .contact button:hover{
     background:#ffd700;
+    }.project-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.project-card{
+background:white;
+width:300px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.project-card button{
+margin-top:15px;
+padding:10px 20px;
+background:#0d47a1;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
     }
 
 </style>
@@ -334,6 +369,36 @@ My goal is to help businesses and individuals build a strong visual identity thr
 </a>
 
         </section>
+    <section class="projects">
+
+<h2>My Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<img src="images/flyer1.jpg" alt="Flyer 1">
+<h3>Business Flyer</h3>
+<p>A modern flyer designed for business promotion.</p>
+<button>View Project</button>
+</div>
+
+<div class="project-card">
+<img src="images/flyer2.jpg" alt="Flyer 2">
+<h3>Social Media Design</h3>
+<p>Creative social media post for brand marketing.</p>
+<button>View Project</button>
+</div>
+
+<div class="project-card">
+<img src="images/logo1.jpg" alt="Logo">
+<h3>Logo Design</h3>
+<p>A clean and professional logo for a business.</p>
+<button>View Project</button>
+</div>
+
+</div>
+
+                                                      </section>
     
 
 
