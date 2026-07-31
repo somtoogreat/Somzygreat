@@ -373,9 +373,15 @@ footer a:hover {
     document.getElementById("myButton").onclick = function() {
         alert("You clicked the button!");
     };
+</script><script>
+    document.getElementById("myButton").onclick = function() {
+        document.getElementById("message").innerHTML = "Thank you for visiting!";
+    };
 </script>
 <body>
+<h2 id="message">Welcome to my website</h2>
 
+<button id="myButton">Click Me</button>
 <header>
 <div class="logo">Somzy</div>
 
