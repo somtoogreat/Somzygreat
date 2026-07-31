@@ -131,23 +131,28 @@ nav a{
     gap:30px;
 }
 
-.project-card{
-    width:300px;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    transition:0.3s;
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .project-card:hover{
     transform:translateY(-10px);
 }
 
-.project-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .project-card h3{
