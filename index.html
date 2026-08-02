@@ -729,13 +729,15 @@ themeButton.addEventListener("click", function () {
         themeButton.textContent = "🌙 Dark Mode";
     }
 });
-function filterProjects(category)const buttons = document.querySelectorAll(".filter-btn");
+function filterProjects(category) {
+    const buttons = document.querySelectorAll(".filter-btn");
 
-buttons.forEach(function(button) {
-    button.classList.remove("active");
-});
+    buttons.forEach(function(button) {
+        button.classList.remove("active");
+    });
 
-event.target.classList.add("active"); {
+    event.target.classList.add("active");
+
     const projects = document.querySelectorAll(".project-card");
 
     projects.forEach(function(project) {
@@ -747,6 +749,7 @@ event.target.classList.add("active"); {
             project.style.display = "none";
         }
     });
+}
 }</script>
 </body>
 </body>
