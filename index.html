@@ -435,6 +435,9 @@ footer a:hover {
 
 .filter-btn:hover {
     background: #08306b;
+}.filter-btn.active {
+    background: #ff9800;
+    color: white;
 }
 </style>
 
@@ -726,7 +729,13 @@ themeButton.addEventListener("click", function () {
         themeButton.textContent = "🌙 Dark Mode";
     }
 });
-function filterProjects(category) {
+function filterProjects(category)const buttons = document.querySelectorAll(".filter-btn");
+
+buttons.forEach(function(button) {
+    button.classList.remove("active");
+});
+
+event.target.classList.add("active"); {
     const projects = document.querySelectorAll(".project-card");
 
     projects.forEach(function(project) {
