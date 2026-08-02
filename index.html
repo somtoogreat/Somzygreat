@@ -396,6 +396,26 @@ footer a:hover {
 
 .dark-mode a {
     color: #4da3ff;
+}#typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #0d47a1;
+    width: 0;
+    animation: typing 3s steps(18, end) forwards,
+               blink 0.8s infinite;
+}@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 </style>
@@ -437,7 +457,7 @@ footer a:hover {
 <section class="hero" id="home">
     <img src="Snapchat-648113798.jpg" alt="Somzy">
 
-<h1>Hello, I'm Somzy</h1>
+<h1 id="typing-text">Hello, I'm Somzy</h1>
 
 
 
