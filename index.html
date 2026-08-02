@@ -417,7 +417,25 @@ footer a:hover {
         border-color: transparent;
     }
 }
+.filter-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
 
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    background: #0d47a1;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: #08306b;
+}
 </style>
 
 
@@ -510,6 +528,12 @@ My goal is to help businesses and individuals build a strong visual identity thr
 <section class="projects" id="projects">
 
     <h2>My Projects</h2>
+<div class="filter-buttons">
+    <button class="filter-btn">All</button>
+    <button class="filter-btn">Flyers</button>
+    <button class="filter-btn">Logos</button>
+    <button class="filter-btn">Web Design</button>
+</div>
 
     <div class="project-grid">
 
