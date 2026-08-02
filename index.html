@@ -529,10 +529,10 @@ My goal is to help businesses and individuals build a strong visual identity thr
 
     <h2>My Projects</h2>
 <div class="filter-buttons">
-    <button class="filter-btn">All</button>
-    <button class="filter-btn">Flyers</button>
-    <button class="filter-btn">Logos</button>
-    <button class="filter-btn">Web Design</button>
+    <button class="filter-btn" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('flyer')">Flyers</button>
+    <button class="filter-btn" onclick="filterProjects('logo')">Logos</button>
+    <button class="filter-btn" onclick="filterProjects('web')">Web Design</button>
 </div>
 
     <div class="project-grid">
@@ -726,7 +726,19 @@ themeButton.addEventListener("click", function () {
         themeButton.textContent = "🌙 Dark Mode";
     }
 });
-</script>
+function filterProjects(category) {
+    const projects = document.querySelectorAll(".project-card");
+
+    projects.forEach(function(project) {
+        if (category === "all") {
+            project.style.display = "block";
+        } else if (project.classList.contains(category)) {
+            project.style.display = "block";
+        } else {
+            project.style.display = "none";
+        }
+    });
+}</script>
 </body>
 </body>
 
