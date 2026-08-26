@@ -704,8 +704,6 @@ My goal is to help businesses and individuals build a strong visual identity thr
 </footer>
 
 <script>
-alert("Welcome to Somzy's Portfolio!");
-</script>
 <script>
 const themeButton = document.getElementById("theme-toggle");
 
@@ -718,18 +716,19 @@ themeButton.addEventListener("click", function () {
         themeButton.textContent = "🌙 Dark Mode";
     }
 });
-function filterProjects(category) {
+
+function filterProjects(category, button) {
     const buttons = document.querySelectorAll(".filter-btn");
 
-    buttons.forEach(function(button) {
-        button.classList.remove("active");
+    buttons.forEach(function (btn) {
+        btn.classList.remove("active");
     });
 
-    event.target.classList.add("active");
+    button.classList.add("active");
 
     const projects = document.querySelectorAll(".project-card");
 
-    projects.forEach(function(project) {
+    projects.forEach(function (project) {
         if (category === "all") {
             project.style.display = "block";
         } else if (project.classList.contains(category)) {
@@ -738,6 +737,8 @@ function filterProjects(category) {
             project.style.display = "none";
         }
     });
+}
+</script>
 }
 }</script>
 </body>
