@@ -680,6 +680,22 @@ My goal is to help businesses and individuals build a strong visual identity thr
     </section>
 
                                                       </section>
+from moviepy.editor import TextClip, CompositeVideoClip, ColorClip
+
+# Like Google Flow - text becomes video
+text = "YARA PERFUME - Luxury in a bottle"
+
+# Background
+bg = ColorClip(size=(720, 1280), color=(0,0,0), duration=5)
+
+# Text animation
+txt = TextClip(text, fontsize=50, color='gold', font='Arial-Bold', size=(700, None), method='caption')
+txt = txt.set_position('center').set_duration(5).fadein(1).fadeout(1)
+
+# Combine = video
+video = CompositeVideoClip([bg, txt])
+video.write_videofile("jay_ad.mp4", fps=24)
+print("Done! Video saved as jay_ad.mp4")
     
 
 
