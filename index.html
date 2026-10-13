@@ -514,7 +514,44 @@ My goal is to help businesses and individuals build a strong visual identity thr
     <p>I'm learning HTML, CSS, and JavaScript while building modern, responsive websites and improving my skills every day.</p>
 </div>
 
-    </section>
+    </section><!DOCTYPE html>
+
+<body style="background:black; color:gold; text-align:center; font-family:Arial">
+<h2>Jay Perfumes - Ad Maker</h2>
+<canvas id="c" width="720" height="1280" style="border:2px solid gold"></canvas><br><br>
+<input id="text" value="YARA - Smell Like Luxury" style="padding:10px; width:300px">
+<button onclick="makeVideo()" style="padding:10px; background:gold; border:none; cursor:pointer">Create Video</button>
+<br><br>
+<video id="v" controls width="360"></video>
+
+<script>
+function makeVideo(){
+  let canvas = document.getElementById("c");
+  let ctx = canvas.getContext("2d");
+  let txt = document.getElementById("text").value;
+  
+  // draw background
+  ctx.fillStyle = "#000";
+  ctx.fillRect(0,0,720,1280);
+  ctx.fillStyle = "gold";
+  ctx.font = "bold 50px Arial";
+  ctx.fillText(txt, 50, 640);
+  ctx.font = "30px Arial";
+  ctx.fillText("jayperfumes.com", 200, 700);
+
+  // record canvas as video
+  let stream = canvas.captureStream(30);
+  let rec = new MediaRecorder(stream);
+  let chunks = [];
+  rec.ondataavailable = e => chunks.push(e.data);
+  rec.onstop = () => {
+    let blob = new Blob(chunks, {type:"video/webm"});
+    document.getElementById("v").src = URL.createObjectURL(blob);
+  };
+  rec.start();
+  setTimeout(()=>rec.stop(), 3000); // 3 sec video
+}
+</script>
    
 
 <section class="projects" id="projects">
